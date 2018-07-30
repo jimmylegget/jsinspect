@@ -16,22 +16,15 @@ rewritten for the 0.10 release and saw several breaking changes.
 * [报告？？](#reporters)
 
 ## Overview
-我们都需要去处理code smell,复制的代码通常是源头-？？
-这种搜索很适合做个好用的CLI 工具
+我们都需要去处理code smell,复制的代码通常是源头-？？ 这种搜索很适合做个好用的CLI 工具
 
-虽有现成的工具，但面对一些代码不好用，或不支持JS 生态：ES6 ... 
+虽有现成的工具，但对一些代码不好用，或不支持JS 生态：ES6 ... 
 
-你可以设置最小分析的门槛，这会找出有相似结构的代码 默认下 它搜索nodes 的对应标识和文字，但可以关掉
-标识包括变量名，方法，属性等，文字包括string 串，数字等
-可以在很多文件夹里找，只会去找.js 的文件
-
-We've all had to deal with code smell, and duplicate code is a common source.
-While some instances are easy to spot, this type of searching is the perfect
-use-case for a helpful CLI tool.
-
-And copy-pasted code is but one type of code duplication. Common boilerplate
-and repeated logic can be identified as well using jsinspect, since it
-doesn't operate directly on tokens - it uses the ASTs of the parsed code.
+可以设置最小分析的门槛，找出有相似结构的代码 默认下 它搜索nodes 的对应标识和文字，但可以关掉
+-标识包括变量名，方法，属性等
+-文字包括string 串，数字等
+-可以在很多文件夹里找 (只会去找.js 的文件
+-支持常见的boilerplate and repeated logic
 
 ![截图](https://cloud.githubusercontent.com/assets/817212/24126139/bd151a34-0da2-11e7-94a8-9742279c8566.png)
 
@@ -84,20 +77,15 @@ be used in place of the defaults listed above. For example:
   "truncate":      100,
 }
 ```
-
-On first use with a project, you may want to run the tool with the following
-options, while running explicitly on the lib/src directories, and not the
-test/spec dir.
+第一次用时，最好用这个选项，lib/src 路径 不要用别的！
 
 ```
 jsinspect -t 50 --ignore "test" ./path/to/src
 ```
-
-From there, feel free to try decreasing the threshold, ignoring identifiers
-using the `-I` flag and ignoring literals with `-L`. A lower threshold may lead
-you to discover new areas of interest for refactoring or cleanup.
+可以降低门槛值！找出更多东西  用`-I` 忽视标识 and ignoring literals with `-L`. 
 
 ## Integration
+
 
 It's simple to run jsinspect on your library source as part of a build
 process. It will exit with an error code of 0 when no matches are found,
