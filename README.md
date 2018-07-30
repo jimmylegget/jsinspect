@@ -1,5 +1,5 @@
-![jsinspect](http://danielstjules.com/github/jsinspect-logo.png)
 （第一次做翻译 有木有大佬指点哈）
+
 JavaScript
 需要 Node.js 6.0+, ES6, JSX ， Flow. 
 
