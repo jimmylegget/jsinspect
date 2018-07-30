@@ -15,24 +15,18 @@ rewritten for the 0.10 release and saw several breaking changes.
 * [整合](#integration)
 * [报告？？](#reporters)
 
-## Overview
+# Overview
 我们都需要去处理code smell,复制的代码通常是源头-？？ 这种搜索很适合做个好用的CLI 工具
 
 虽有现成的工具，但对一些代码不好用，或不支持JS 生态：ES6 ... 
 
 可以设置最小分析的门槛，找出有相似结构的代码 默认下 它搜索nodes 的对应标识和文字，但可以关掉
 
--标识包括变量名，方法，属性等
-
--文字包括string 串，数字等
-
--可以在很多文件夹里找 (只会去找.js 的文件
-
--支持常见的boilerplate and repeated logic
+-标识包括变量名，方法，属性等 -文字包括string 串，数字等 -可以在很多文件夹里找 (只会去找.js 的文件 -支持常见的boilerplate and repeated logic
 
 ![截图](https://cloud.githubusercontent.com/assets/817212/24126139/bd151a34-0da2-11e7-94a8-9742279c8566.png)
 
-## Installation
+# Installation
 
 用 `npm` :
 
