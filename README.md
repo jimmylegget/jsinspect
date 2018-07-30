@@ -1,31 +1,33 @@
-（第一次做翻译 有木有大佬指点哈）
+（第一次做翻译 有木有大佬指点哈 随便改）
 
-JavaScript
-需要 Node.js 6.0+, ES6, JSX ， Flow. 
+#JavaScript
+要 Node.js 6.0+, ES6, JSX ， Flow. 
 
 
-Note: 这个项目？？ 不懂 the project has been mostly
-rewritten for the 0.10 release and saw several breaking changes.
+Note: 这个项目？？ 不懂 the project has been mostly rewritten for the 0.10 release and saw several breaking changes.
 
 [![Build Status](https://travis-ci.org/danielstjules/jsinspect.svg?branch=master)](https://travis-ci.org/danielstjules/jsinspect)
 
-* [介绍](#overview)
+* [介绍](#简介)
 * [安装](#installation)
 * [使用](#usage)
 * [整合](#integration)
 * [报告？？](#reporters)
 
-# Overview
-我们都需要去处理code smell,复制的代码通常是源头-？？ 这种搜索很适合做个好用的CLI 工具
+# 简介
+我们都需要code smell,复制的代码通常是源头-？ 这种搜索适合做个好用的CLI 工具
 
 虽有现成的工具，但对一些代码不好用，或不支持JS 生态：ES6 ... 
 
-可以设置最小分析的门槛，找出有相似结构的代码 默认下 它搜索nodes 的对应标识和文字，但可以关掉
+可设置最小门槛，找相似结构的代码     默认搜索nodes 的标识和文字，但可以关掉
 
-- 标识包括变量名，方法，属性等 
-- 文字包括string 串，数字等 
-- 可以在很多文件夹里找 (只会去找.js 的文件 
-- 支持常见的boilerplate and repeated logic
+- 标识包括：变量名，方法，属性等 
+
+- 文字包括：string 串，数字等 
+
+- 多文件夹 (只会去找.js 的文件 
+
+- 常见的boilerplate, 重复逻辑
 
 ![截图](https://cloud.githubusercontent.com/assets/817212/24126139/bd151a34-0da2-11e7-94a8-9742279c8566.png)
 
@@ -165,3 +167,4 @@ function intersectionB(arrayA, arrayB) {
 </duplication>
 </pmd-cpd>
 ```
+
